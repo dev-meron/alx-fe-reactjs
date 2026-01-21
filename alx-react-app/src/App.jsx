@@ -1,13 +1,17 @@
-import WelcomeMessage from './components/WelcomeMessage';
-import './App.css';
+// src/App.jsx
+
+import Header from './components/Header';
+import MainContent from './components/MainContent';
+import Footer from './components/Footer';
 
 function App() {
-  return (
-    <div className="App">
-      {/* Custom component */}
-      <WelcomeMessage />
-    </div>
-  );
+    return (
+        <div>
+            <Header />
+            <MainContent />
+            <Footer />
+        </div>
+    );
 }
 
 export default App;
