@@ -5,6 +5,9 @@ function MainContent() {
       <p style={{ lineHeight: '1.6', fontSize: '1.1rem' }}>
         Here you’ll find information about my favorite cities and why I love them.
       </p>
+      <p style={{ lineHeight: '1.6', fontSize: '1.1rem', color: 'darkblue' }}>
+        I love to visit New York, Paris, and Tokyo.
+      </p>
     </main>
   );
 }
