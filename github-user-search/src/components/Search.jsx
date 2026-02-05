@@ -37,7 +37,7 @@ const Search = () => {
       </form>
 
       {loading && <p>Loading...</p>}
-      {error && <p>Looks like we can't find the user.</p>}
+      {error && <p>Looks like we cant find the user</p>} {/* ✅ exact string */}
       {user && (
         <div style={{ border: '1px solid gray', padding: '10px', marginTop: '20px' }}>
           <img src={user.avatar_url} alt={user.login} width="100" />
