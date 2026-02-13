@@ -52,7 +52,7 @@ function AddRecipeForm() {
       <h1 className="text-3xl font-bold text-center mb-6">Add a New Recipe</h1>
       <form
         onSubmit={handleSubmit}
-        className="bg-white shadow-lg rounded-lg p-6 max-w-lg mx-auto"
+        className="bg-white shadow-lg rounded-lg p-6 max-w-lg md:max-w-2xl mx-auto"
       >
         {/* Title */}
         <div className="mb-4">
@@ -105,7 +105,7 @@ function AddRecipeForm() {
         {/* Submit Button */}
         <button
           type="submit"
-          className="w-full bg-blue-500 text-white font-semibold py-2 rounded-lg hover:bg-blue-600 transition duration-300"
+          className="w-full md:w-auto bg-blue-500 text-white font-semibold py-2 px-6 rounded-lg hover:bg-blue-600 transition duration-300"
         >
           Submit Recipe
         </button>
