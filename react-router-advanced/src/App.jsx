@@ -1,8 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import Profile from "./components/Profile";   // ✅ updated path
-import ProfileDetails from "./pages/ProfileDetails";
-import ProfileSettings from "./pages/ProfileSettings";
+import Profile from "./components/Profile";
 import BlogPost from "./pages/BlogPost";
 import ProtectedRoute from "./ProtectedRoute";
 
@@ -12,7 +10,7 @@ function App() {
       <Routes>
         {/* Public Routes */}
         <Route path="/" element={<Home />} />
-        <Route path="/blog/:postId" element={<BlogPost />} />
+        <Route path="/blog/:id" element={<BlogPost />} />   {/* ✅ corrected path */}
 
         {/* Protected Nested Routes */}
         <Route
@@ -22,14 +20,10 @@ function App() {
               <Profile />
             </ProtectedRoute>
           }
-        >
-          <Route path="details" element={<ProfileDetails />} />
-          <Route path="settings" element={<ProfileSettings />} />
-        </Route>
+        />
       </Routes>
     </BrowserRouter>
   );
 }
 
 export default App;
-
