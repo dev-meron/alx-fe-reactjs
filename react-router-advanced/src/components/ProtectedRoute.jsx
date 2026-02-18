@@ -1,9 +1,14 @@
 import { Navigate } from "react-router-dom";
 
-export default function ProtectedRoute({ children }) {
-  // Simulate authentication status
-  const isAuthenticated = false; // change to true to simulate logged-in user
+// Simple custom hook to simulate authentication
+function useAuth() {
+  // In a real app, you'd check auth state from context or a provider
+  const isAuthenticated = false; // change to true to simulate login
+  return { isAuthenticated };
+}
 
-  // If authenticated, render children; otherwise redirect to home
+export default function ProtectedRoute({ children }) {
+  const { isAuthenticated } = useAuth();
+
   return isAuthenticated ? children : <Navigate to="/" replace />;
 }
